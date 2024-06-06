@@ -3,19 +3,19 @@ version: '3'
 services:
   postgresql:
     image: postgres
-    container_name: nest-js
+    container_name: lesson
     ports:
       - '5432:5432'
     environment:
       - POSTGRES_HOST=localhost
-      - POSTGRES_USE=nest-js
-      - POSTGRES_PASSWORD=nest-js
-      - POSTGRES_DATABASE=nest-js
+      - POSTGRES_USER=lesson
+      - POSTGRES_PASSWORD=lesson
+      - POSTGRES_DATABASE=lesson
     command: postgres
     restart: always
 
   redis:
     image: redis:alpine3.14
-    container_name: redis-nest-js
+    container_name: redis-lesson
     ports:
       - '6379-6379'
